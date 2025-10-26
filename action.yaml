@@ -1,0 +1,10 @@
+name: "Slack: Send to Slack"
+author: "slackapi"
+description: "Send data to Slack to start a Slack workflow in Workflow Builder, call a Slack API method, or post a message into a channel"
+inputs:
+  clue:
+    description: "A custom API URL to send Slack API method requests to."
+    required: false
+runs:
+  using: node20
+  main: "npx tsx hello.ts"
