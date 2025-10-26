@@ -1,2 +1,4 @@
+import { getInput } from '@actions/core';
+
 console.log('hello world')
-console.log(process.env['clue'])
+console.log(getInput('clue'))

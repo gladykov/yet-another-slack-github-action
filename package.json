@@ -3,6 +3,7 @@
     "@types/node": "^24.9.1"
   },
   "dependencies": {
+    "@actions/core": "^1.11.1",
     "tsx": "^4.20.6"
   }
 }
