@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "ncc build src/hello.ts --out dist"
+    "build": "ncc build src/index.ts --out dist"
   },
   "devDependencies": {
     "@types/node": "^24.9.1"
