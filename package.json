@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1",
+    "@slack/web-api": "^7.12.0",
     "@vercel/ncc": "^0.38.4",
     "tsx": "^4.20.6"
   }

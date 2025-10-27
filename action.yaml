@@ -1,10 +1,42 @@
-name: "Slack: Send to Slack"
-author: "slackapi"
-description: "Send data to Slack to start a Slack workflow in Workflow Builder, call a Slack API method, or post a message into a channel"
+name: "Yet Another Slack Notification Github Action"
+author: "gladykov"
+description: "Send notification to slack"
 inputs:
-  clue:
-    description: "A custom API URL to send Slack API method requests to."
+  CHANNEL_ID:
+    description: "Channel to send notification to"
+    required: true
+  TOKEN:
+    description: "API Token"
+    required: true
+  TITLE:
+    description: "Title of notification"
+    required: true
+  STATUS:
+    description: "Job status"
+    required: true
+  MESSAGE:
+    description: "Message of notification"
     required: false
+  MESSAGE_SUCCESS:
+    description: "Message shown when job succeeds"
+    required: false
+  MESSAGE_FAILURE:
+    description: "Message shown when job fails"
+    required: false
+  BUTTONS:
+    description: "JSON with clickable buttons"
+    required: false
+  ELEMENTS:
+    description: "Which elements we should snow in notification. If empty we show all."
+    required: false
+  MESSAGE_ID:
+    description: "If passed, updates existing message"
+    required: false
+outputs:
+  MESSAGE_ID:
+    description: "Id of message created / updated"
+
+
 runs:
   using: node20
   main: "dist/index.js"
